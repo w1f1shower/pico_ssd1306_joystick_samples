@@ -8,28 +8,28 @@
 #include "pico/stdlib.h"
 #include "pico/binary_info.h"
 #include "hardware/i2c.h"
+#include "hardware/adc.h"
+#include "pico/multicore.h"
 
 //SSD1306 i2c stuff
 #define SSD1306_HEIGHT              64 
 #define SSD1306_WIDTH		   128
 
 #define SSD1306_I2C_ADDR            _u(0x3C)
-
 #define SSD1306_I2C_CLK             1000
 
 #define I2C_INTERFACE i2c1
 
-// ADC Joystick stuff
 #define PICO_I2C_SDA_PIN 26
 #define PICO_I2C_SCL_PIN 27
 
-#define PICO_ADC_VRY_PIN 28
+// ADC Joystick stuff
 #define PICO_ADC_VRX_PIN 28
-
-#define ADC_X_PORT 2
-#define ADC_Y_PORT 3
+#define PICO_ADC_VRY_PIN 29
 
 #define JOY_SW_PIN 1
+#define ADC_X_PORT 2
+#define ADC_Y_PORT 3
 
 #define JOYSTICK_DEADZONE 200
 

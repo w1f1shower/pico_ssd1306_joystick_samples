@@ -1,13 +1,4 @@
 #include "ssd1306.h"
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include "pico/stdlib.h"
-#include "pico/binary_info.h"
-#include "hardware/i2c.h"
-#include "hardware/adc.h"
-#include "pico/multicore.h"
 
 
 uint8_t buf[SSD1306_BUF_LEN];
