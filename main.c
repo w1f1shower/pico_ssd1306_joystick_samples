@@ -3,6 +3,7 @@
 
 uint8_t buf[SSD1306_BUF_LEN];
 
+uint8_t game_map_chunk[GAME_MAP_CHUNK_HEIGHT][GAME_MAP_CHUNK_WIDTH];
 
 void render_core1(){
 

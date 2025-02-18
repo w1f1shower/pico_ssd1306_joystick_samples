@@ -33,8 +33,12 @@
 
 #define JOYSTICK_DEADZONE 200
 
+//game map stuff
+#define GAME_MAP_CHUNK_WIDTH 50
+#define GAME_MAP_CHUNK_HEIGHT 50
 
-// commands (see datasheet)
+
+//SSD1306 commands (see datasheet)
 #define SSD1306_SET_MEM_MODE        _u(0x20)
 #define SSD1306_SET_COL_ADDR        _u(0x21)
 #define SSD1306_SET_PAGE_ADDR       _u(0x22)
@@ -88,5 +92,18 @@ void SSD1306_scroll(bool on);
 void render(uint8_t *buf, struct render_area *area);
 void SetPixel(uint8_t *buf, int x, int y, bool on);
 void DrawLine(uint8_t *buf, int x0, int y0, int x1, int y1, bool on);
+
+//game stuff
+struct player {
+	//basic game info
+	uint8_t id;
+	uint8_t health;
+	uint8_t damage;
+
+	//render values
+	uint8_t position[][];
+	uint8_t moving_way_id; 
+	uint8_t render_size[][];
+}
 
 #endif
