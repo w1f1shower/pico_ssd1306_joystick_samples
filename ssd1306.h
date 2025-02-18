@@ -101,9 +101,9 @@ struct player {
 	uint8_t damage;
 
 	//render values
-	uint8_t position[][];
+	uint8_t position;
 	uint8_t moving_way_id; 
-	uint8_t render_size[][];
-}
+	uint8_t render_size;
+};
 
 #endif

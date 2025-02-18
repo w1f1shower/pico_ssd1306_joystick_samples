@@ -169,7 +169,7 @@ void DrawLine(uint8_t *buf, int x0, int y0, int x1, int y1, bool on) {
 			y0 += sy;
 		}
 	}
-};
+}
 
 void game_map2frame(uint8_t game_chunk, struct player player) {
 			
